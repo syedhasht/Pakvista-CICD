@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --primary-color: #0b5d3b;
   --secondary-color: #f4b400;
   --background-color: #f7f9f8;
@@ -160,7 +160,7 @@ footer {
   color: #ffffff;
 }
 
-@media (max-width: 700px) {
+@media (width <= 700px) {
   .nav-bar {
     flex-direction: column;
     gap: 14px;
