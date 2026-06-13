@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "pakvista-cicd",
   "version": "1.0.0",
   "description": "PakVista static tourism website for DevOps CI/CD term project",
@@ -8,11 +8,9 @@
     "build": "parcel build index.html --dist-dir dist --public-url ./"
   },
   "devDependencies": {
-    "@parcel/packager-raw-url": "^2.15.4",
-    "@parcel/transformer-webmanifest": "^2.15.4",
     "htmlhint": "^1.1.4",
-    "parcel": "^2.15.4",
-    "stylelint": "^16.25.0",
-    "stylelint-config-standard": "^39.0.1"
+    "parcel": "^2.13.3",
+    "stylelint": "^16.12.0",
+    "stylelint-config-standard": "^36.0.1"
   }
 }
