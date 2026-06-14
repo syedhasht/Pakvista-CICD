@@ -1,0 +1,45 @@
+name: ci-prod
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint HTML
+        run: npm run lint:html
+
+      - name: Lint CSS
+        run: npm run lint:css
+
+      - name: Build project
+        run: npm run build
+
+      - name: Login Docker Hub
+        run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+
+      - name: Build Docker image
+        run: docker build -t syedhasht/pakvista-cicd:prod-latest .
+
+      - name: Tag image with SHA
+        run: docker tag syedhasht/pakvista-cicd:prod-latest syedhasht/pakvista-cicd:prod-${{ github.sha }}
+
+      - name: Push images
+        run: |
+          docker push syedhasht/pakvista-cicd:prod-latest
+          docker push syedhasht/pakvista-cicd:prod-${{ github.sha }}
