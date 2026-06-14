@@ -1,4 +1,4 @@
-﻿# PakVista CI/CD
+# PakVista CI/CD
 
 PakVista is a static tourism website about Pakistan's major travel destinations. This project demonstrates a complete multi-environment CI/CD pipeline using GitHub Actions, Docker Hub, and Render.
 
@@ -17,8 +17,8 @@ Each environment has a separate CI workflow and a separate CD workflow. The webs
 | Environment | URL |
 |---|---|
 | Development | https://pakvista-dev.onrender.com |
-| Staging | Pending |
-| Production | Pending |
+| Staging | https://pakvista-staging.onrender.com |
+| Production | https://pakvista-prod.onrender.com |
 
 ## Repository
 
@@ -270,6 +270,6 @@ The final submission document should include screenshots of:
 | Development CI | Completed |
 | Development deployment | Completed |
 | Docker Hub dev image | Completed |
-| Staging setup | Pending |
-| Production setup | Pending |
-| Member PRs | Pending |
+| Staging setup | Completed |
+| Production setup | Completed |
+| Member PRs | Completed |
