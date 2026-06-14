@@ -1,0 +1,19 @@
+name: ci-staging
+
+on:
+  pull_request:
+    branches:
+      - staging
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Basic HTML check
+        run: echo "Staging CI running"
+
+      - name: Docker build test
+        run: docker build -t pakvista:staging-latest .
