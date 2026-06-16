@@ -17,7 +17,7 @@ Each environment has a separate CI workflow and a separate CD workflow. The webs
 | Environment | URL |
 |---|---|
 | Development | https://pakvista-dev.onrender.com |
-| Staging | https://pakvista-staging.onrender.com |
+| Staging | https://pakvista-cicd.onrender.com |
 | Production | https://pakvista-prod.onrender.com |
 
 ## Repository
